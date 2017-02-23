@@ -1,0 +1,12 @@
+<div class = 'col-sm-6 col-lg-4'>
+    <br/>
+    <div class = "card">
+        <div class= "card-topper" style='background-image: url(<%= post.banner_image_url %>);'></div>
+        <div class = "card-block">
+            <h4 class = "card-title" style = "font-size: large;"><%= link_to post.title, post %></h4>
+            <p class = "published-date" style = "font-size: xx-small;"><%= post.display_day_published %></p>
+            <p class = "card-text" style = "font-size: small;"><%= truncate(post.description, lenght: 130) %></p>
+            <%= link_to 'Ler', post, class: 'btn btn-read' %>
+        </div>
+    </div>
+</div>

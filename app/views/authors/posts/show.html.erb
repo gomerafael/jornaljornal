@@ -1,0 +1,20 @@
+<% provide(:page_title, @post.title) %>
+<% provide(:author, 'active') %>
+
+<div>
+    <br>
+    <%= link_to 'Editar', edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
+    <%= link_to 'Remover', authors_post_path(@post), method: :delete, data: {
+        confirm: 'Você tem certeza que deseja remover o post?'}, class: 'btn btn-sm btn-danger'  %>
+</div>
+
+<div class="linha">
+    <div class ="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+        <h1><%= @post.title %></h1>
+
+        <%= @post.body.html_safe %>
+        <br />
+        <br />
+        <%= @post.description %>
+    </div>
+</div>

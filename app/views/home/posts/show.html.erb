@@ -1,0 +1,13 @@
+<% provide(:page_title, @post.title) %>
+<% provide(:home_active, 'active') %>
+
+<div class="linha">
+    <div class ="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+        <h1><%= @post.title %></h1>
+
+        <%= @post.body.html_safe %>
+        <br />
+        <br />
+        <%= @post.description %>
+    </div>
+</div>
